@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -rn \"citation-band\" /mnt/c/Users/benja/OneDrive/Bureau/site theatre/*.html)"
+      "Bash(grep -rn \"citation-band\" /mnt/c/Users/benja/OneDrive/Bureau/site theatre/*.html)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
