@@ -5,11 +5,12 @@
 .hero-carousel-wrap {
   position: sticky;
   top: 0;
-  height: 92vh;
+  height: 100vh;
   min-height: 540px;
   overflow: hidden;
   background: #141210;
   z-index: 1;
+  margin-top: -73px;
 }
 
 .hero-carousel-wrap .carousel,

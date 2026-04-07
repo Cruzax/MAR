@@ -2,10 +2,23 @@
    LAYOUT — Barre de navigation
    ============================================= */
 
+/* Compense la navbar fixed-top sur les pages sans hero */
+body { padding-top: 73px; }
+.hero-carousel-wrap ~ * { /* hero gère lui-même son décalage */ }
+section.hero-carousel-wrap:first-of-type,
+div.hero-carousel-wrap { padding-top: 0; }
+body:has(.hero-carousel-wrap) { padding-top: 0; }
+
 .navbar {
+  background: transparent !important;
+  border-bottom: 1px solid transparent;
+  padding: 1rem 0;
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.navbar.scrolled {
   background: var(--blanc) !important;
   border-bottom: 1px solid var(--creme-fonce);
-  padding: 1rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .navbar-brand {
@@ -34,7 +47,7 @@
 }
 
 .nav-link {
-  color: var(--gris-fonce) !important;
+  color: rgba(255,255,255,0.88) !important;
   font-size: 0.82rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -44,7 +57,20 @@
 }
 .nav-link:hover,
 .nav-link.active {
+  color: var(--ambre-doux) !important;
+}
+.navbar.scrolled .nav-link {
+  color: var(--gris-fonce) !important;
+}
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
   color: var(--rouge) !important;
+}
+.logo-texte {
+  transition: color 0.35s ease;
+}
+.navbar:not(.scrolled) .logo-texte {
+  color: var(--blanc);
 }
 
 .nav-cta,
